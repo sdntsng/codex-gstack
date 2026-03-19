@@ -14,11 +14,14 @@ Codex-native workflow skills inspired by [gstack](https://github.com/garrytan/gs
 - `pr-preflight-review` — branch review before push or PR
 - `doc-sync-after-change` — diff-driven documentation sync
 - `ship` — release-minded final readiness pass
+- `setup-browser-cookies` — establish authenticated browser testing without redoing login manually
+- `codex-gstack-upgrade` — refresh a local `codex-gstack` installation safely
 
 ### Founder and planning workflows
 - `office-hours` — sharpen the product problem before implementation
 - `plan-ceo-review` — founder-level product and scope review
 - `plan-eng-review` — buildable architecture and execution planning
+- `plan-design-review` — design review of the plan before implementation starts
 
 ### Design and operating workflows
 - `design-consultation` — upfront design direction and system choices
@@ -69,7 +72,9 @@ This will:
 
 ## Current upstream coverage
 
-### Curated and mapped
+All currently discovered upstream `gstack` skills are mapped.
+
+### Mapped skills
 - `browse` -> `browser-dogfood`
 - `debug` -> `systematic-debugging`
 - `qa-only` -> `web-qa-report`
@@ -77,17 +82,17 @@ This will:
 - `review` -> `pr-preflight-review`
 - `document-release` -> `doc-sync-after-change`
 - `ship` -> `ship`
+- `setup-browser-cookies` -> `setup-browser-cookies`
+- `gstack-upgrade` -> `codex-gstack-upgrade`
 - `office-hours` -> `office-hours`
 - `plan-ceo-review` -> `plan-ceo-review`
 - `plan-eng-review` -> `plan-eng-review`
+- `plan-design-review` -> `plan-design-review`
 - `design-consultation` -> `design-consultation`
 - `design-review` -> `design-review-live`
 - `retro` -> `project-retro`
 
-### Currently scaffolded, not yet curated
-- `plan-design-review`
-- `setup-browser-cookies`
-- `gstack-upgrade`
+If new upstream skills appear later, `scaffold-new` will generate starter Codex ports automatically.
 
 ## Repository layout
 
