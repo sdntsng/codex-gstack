@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Browser Cookies"
+  short_description: "Enable authenticated browser testing"
+  default_prompt: "Use $setup-browser-cookies to prepare authenticated browser access for this site before QA."

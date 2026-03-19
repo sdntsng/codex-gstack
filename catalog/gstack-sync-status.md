@@ -18,5 +18,5 @@ Source: `../knowledge-base/gstack`
 | `qa-only` | `web-qa-report` | `engineering` | mapped |
 | `retro` | `project-retro` | `operations` | mapped |
 | `review` | `pr-preflight-review` | `engineering` | mapped |
-| `setup-browser-cookies` | `-` | `-` | unmapped |
+| `setup-browser-cookies` | `setup-browser-cookies` | `engineering` | mapped |
 | `ship` | `ship` | `engineering` | mapped |

@@ -66,6 +66,11 @@
       "category": "engineering"
     },
     {
+      "source": "setup-browser-cookies",
+      "target": "setup-browser-cookies",
+      "category": "engineering"
+    },
+    {
       "source": "ship",
       "target": "ship",
       "category": "engineering"
