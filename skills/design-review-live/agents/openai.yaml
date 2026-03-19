@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Review Live"
+  short_description: "Live visual product and UX audit"
+  default_prompt: "Use $design-review-live to audit this implemented UI and identify the highest-value design fixes."

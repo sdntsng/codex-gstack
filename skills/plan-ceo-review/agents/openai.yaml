@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan CEO Review"
+  short_description: "Founder-level product plan review"
+  default_prompt: "Use $plan-ceo-review to challenge this plan from a founder and product perspective."

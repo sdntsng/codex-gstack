@@ -1,0 +1,4 @@
+interface:
+  display_name: "Office Hours"
+  short_description: "Founder and product reframing"
+  default_prompt: "Use $office-hours to reframe this product idea before we implement anything."

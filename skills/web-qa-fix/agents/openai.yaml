@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web QA Fix"
+  short_description: "QA, fix bugs, and re-verify"
+  default_prompt: "Use $web-qa-fix to test this app, fix verified bugs, and re-check the flows."

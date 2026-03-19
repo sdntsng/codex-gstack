@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Eng Review"
+  short_description: "Architecture and implementation planning"
+  default_prompt: "Use $plan-eng-review to turn this idea into a buildable technical plan."

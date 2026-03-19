@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship"
+  short_description: "Release-ready final checks and handoff"
+  default_prompt: "Use $ship to prepare this branch for release with checks, docs, and a clean summary."

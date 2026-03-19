@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Retro"
+  short_description: "Execution retrospective from recent work"
+  default_prompt: "Use $project-retro to summarize what happened recently and what to improve next."

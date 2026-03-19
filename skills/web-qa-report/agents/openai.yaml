@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web QA Report"
+  short_description: "Report-only QA audit for web apps"
+  default_prompt: "Use $web-qa-report to test this web app and produce a prioritized bug report."

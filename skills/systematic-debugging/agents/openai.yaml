@@ -1,0 +1,4 @@
+interface:
+  display_name: "Systematic Debugging"
+  short_description: "Root-cause-first bug investigation"
+  default_prompt: "Use $systematic-debugging to investigate this bug before making any fix."

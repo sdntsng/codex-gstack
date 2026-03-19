@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Preflight Review"
+  short_description: "Check diff scope and structural risks"
+  default_prompt: "Use $pr-preflight-review to review this branch before I push or open a PR."

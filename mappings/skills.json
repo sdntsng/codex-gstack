@@ -1,0 +1,17 @@
+{
+  "mapped_skills": [
+    {"source": "browse", "target": "browser-dogfood", "category": "engineering"},
+    {"source": "debug", "target": "systematic-debugging", "category": "engineering"},
+    {"source": "qa-only", "target": "web-qa-report", "category": "engineering"},
+    {"source": "qa", "target": "web-qa-fix", "category": "engineering"},
+    {"source": "review", "target": "pr-preflight-review", "category": "engineering"},
+    {"source": "document-release", "target": "doc-sync-after-change", "category": "engineering"},
+    {"source": "ship", "target": "ship", "category": "engineering"},
+    {"source": "office-hours", "target": "office-hours", "category": "founder"},
+    {"source": "plan-ceo-review", "target": "plan-ceo-review", "category": "founder"},
+    {"source": "plan-eng-review", "target": "plan-eng-review", "category": "founder"},
+    {"source": "design-consultation", "target": "design-consultation", "category": "design"},
+    {"source": "design-review", "target": "design-review-live", "category": "design"},
+    {"source": "retro", "target": "project-retro", "category": "operations"}
+  ]
+}

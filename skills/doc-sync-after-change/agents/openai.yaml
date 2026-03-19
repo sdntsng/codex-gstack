@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doc Sync After Change"
+  short_description: "Update docs to match recent code changes"
+  default_prompt: "Use $doc-sync-after-change to sync the project docs with the recent code changes."

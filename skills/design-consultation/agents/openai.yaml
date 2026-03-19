@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Consultation"
+  short_description: "Upfront product design direction"
+  default_prompt: "Use $design-consultation to define the design direction for this product or page."

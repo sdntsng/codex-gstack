@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Dogfood"
+  short_description: "Real browser QA and dogfooding"
+  default_prompt: "Use $browser-dogfood to test this flow in a real browser and return evidence."
