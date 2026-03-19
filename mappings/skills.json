@@ -26,6 +26,11 @@
       "category": "engineering"
     },
     {
+      "source": "gstack-upgrade",
+      "target": "codex-gstack-upgrade",
+      "category": "maintenance"
+    },
+    {
       "source": "office-hours",
       "target": "office-hours",
       "category": "founder"

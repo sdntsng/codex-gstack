@@ -9,7 +9,7 @@ Source: `../knowledge-base/gstack`
 | `design-consultation` | `design-consultation` | `design` | mapped |
 | `design-review` | `design-review-live` | `design` | mapped |
 | `document-release` | `doc-sync-after-change` | `engineering` | mapped |
-| `gstack-upgrade` | `-` | `-` | unmapped |
+| `gstack-upgrade` | `codex-gstack-upgrade` | `maintenance` | mapped |
 | `office-hours` | `office-hours` | `founder` | mapped |
 | `plan-ceo-review` | `plan-ceo-review` | `founder` | mapped |
 | `plan-design-review` | `plan-design-review` | `design` | mapped |

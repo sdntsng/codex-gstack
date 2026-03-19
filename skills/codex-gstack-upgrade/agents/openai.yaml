@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Gstack Upgrade"
+  short_description: "Refresh a local codex-gstack install"
+  default_prompt: "Use $codex-gstack-upgrade to update this local codex-gstack installation and refresh its skill links."
