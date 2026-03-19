@@ -1,6 +1,6 @@
 # gstack sync status
 
-Source: `/Users/sid/Documents/Projects/co-work/knowledge-base/gstack`
+Source: `../knowledge-base/gstack`
 
 | gstack skill | codex skill | category | status |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Source: `/Users/sid/Documents/Projects/co-work/knowledge-base/gstack`
 | `gstack-upgrade` | `-` | `-` | unmapped |
 | `office-hours` | `office-hours` | `founder` | mapped |
 | `plan-ceo-review` | `plan-ceo-review` | `founder` | mapped |
-| `plan-design-review` | `-` | `-` | unmapped |
+| `plan-design-review` | `plan-design-review` | `design` | mapped |
 | `plan-eng-review` | `plan-eng-review` | `founder` | mapped |
 | `qa` | `web-qa-fix` | `engineering` | mapped |
 | `qa-only` | `web-qa-report` | `engineering` | mapped |

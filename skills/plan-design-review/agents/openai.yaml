@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Design Review"
+  short_description: "Design review before implementation starts"
+  default_prompt: "Use $plan-design-review to review this plan from a design perspective before implementation starts."
