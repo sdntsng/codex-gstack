@@ -72,27 +72,46 @@ This will:
 
 ## Current upstream coverage
 
-All currently discovered upstream `gstack` skills are mapped.
+The local upstream source used for the current mapping is `../knowledge-base/gstack`.
 
-### Mapped skills
-- `browse` -> `browser-dogfood`
-- `debug` -> `systematic-debugging`
-- `qa-only` -> `web-qa-report`
-- `qa` -> `web-qa-fix`
-- `review` -> `pr-preflight-review`
-- `document-release` -> `doc-sync-after-change`
-- `ship` -> `ship`
-- `setup-browser-cookies` -> `setup-browser-cookies`
-- `gstack-upgrade` -> `codex-gstack-upgrade`
-- `office-hours` -> `office-hours`
-- `plan-ceo-review` -> `plan-ceo-review`
-- `plan-eng-review` -> `plan-eng-review`
-- `plan-design-review` -> `plan-design-review`
-- `design-consultation` -> `design-consultation`
-- `design-review` -> `design-review-live`
-- `retro` -> `project-retro`
+- Local `gstack` HEAD: `52f1607`
+- Local `gstack` `origin/main`: `50a7cf8`
+- Remote upstream checked on 2026-03-19: [garrytan/gstack](https://github.com/garrytan/gstack) (pushed at `2026-03-19T05:38:59Z`)
 
-If new upstream skills appear later, `scaffold-new` will generate starter Codex ports automatically.
+### Mapping matrix
+
+| Upstream gstack skill | codex-gstack skill | Status |
+| --- | --- | --- |
+| `browse` | `browser-dogfood` | ported |
+| `debug` | `systematic-debugging` | ported |
+| `qa-only` | `web-qa-report` | ported |
+| `qa` | `web-qa-fix` | ported |
+| `review` | `pr-preflight-review` | ported |
+| `document-release` | `doc-sync-after-change` | ported |
+| `ship` | `ship` | ported |
+| `setup-browser-cookies` | `setup-browser-cookies` | ported |
+| `gstack-upgrade` | `codex-gstack-upgrade` | ported |
+| `office-hours` | `office-hours` | ported |
+| `plan-ceo-review` | `plan-ceo-review` | ported |
+| `plan-eng-review` | `plan-eng-review` | ported |
+| `plan-design-review` | `plan-design-review` | ported |
+| `design-consultation` | `design-consultation` | ported |
+| `design-review` | `design-review-live` | ported |
+| `retro` | `project-retro` | ported |
+
+### Remote upstream delta
+
+The live upstream repo currently has additional top-level skills that are newer than the local imported `gstack` checkout:
+
+| Remote-only gstack skill | codex-gstack status | Notes |
+| --- | --- | --- |
+| `careful` | not ported | destructive-command safety guardrails |
+| `codex` | not ported | Claude-oriented Codex wrapper workflow; needs deeper adaptation |
+| `freeze` | not ported | filesystem boundary lock skill |
+| `guard` | not ported | combined `careful` + `freeze` safety wrapper |
+| `unfreeze` | not ported | clears a prior freeze boundary |
+
+If new upstream skills appear later, `scaffold-new` will generate starter Codex ports automatically. Remote-only skills should be reviewed before porting instead of copied verbatim.
 
 ## Repository layout
 
