@@ -1,32 +1,33 @@
 # codex-gstack
 
-Codex-native workflow skills inspired by `gstack`.
+Codex-native workflow skills inspired by [gstack](https://github.com/garrytan/gstack).
 
-`codex-gstack` is a public skill pack for Codex users who want structured specialist workflows instead of ad hoc prompting. It ports the highest-value ideas from `gstack` into concise, Codex-first skills and adds a lightweight sync pipeline so new upstream `gstack` skills can be detected and scaffolded quickly.
+`codex-gstack` is a public skill pack for Codex users who want structured specialist workflows instead of ad hoc prompting. It ports the highest-value ideas from `gstack` into concise, Codex-first skills and ships a lightweight sync pipeline so new upstream `gstack` skills can be detected and scaffolded quickly.
 
-## What this repo includes
+## What you get
 
-### Core engineering skills
-- `browser-dogfood`
-- `systematic-debugging`
-- `web-qa-report`
-- `web-qa-fix`
-- `pr-preflight-review`
-- `doc-sync-after-change`
-- `ship`
+### Engineering workflows
+- `browser-dogfood` — browser-backed testing, verification, and dogfooding
+- `systematic-debugging` — root-cause-first debugging
+- `web-qa-report` — report-only QA pass for web apps
+- `web-qa-fix` — QA, fix verified bugs, and re-test
+- `pr-preflight-review` — branch review before push or PR
+- `doc-sync-after-change` — diff-driven documentation sync
+- `ship` — release-minded final readiness pass
 
-### Founder and planning skills
-- `office-hours`
-- `plan-ceo-review`
-- `plan-eng-review`
+### Founder and planning workflows
+- `office-hours` — sharpen the product problem before implementation
+- `plan-ceo-review` — founder-level product and scope review
+- `plan-eng-review` — buildable architecture and execution planning
 
-### Design and execution skills
-- `design-consultation`
-- `design-review-live`
-- `project-retro`
+### Design and operating workflows
+- `design-consultation` — upfront design direction and system choices
+- `design-review-live` — live UI and UX audit
+- `project-retro` — retrospective from recent work patterns
 
 ## Why this exists
-`gstack` has strong workflow ideas, but it is optimized for Claude Code and carries a lot of Claude-specific ceremony. This repo focuses on the reusable part:
+
+`gstack` has strong workflow ideas, but it is optimized for Claude Code and carries a lot of Claude-specific ceremony. `codex-gstack` focuses on the reusable part:
 - specialist roles
 - real browser testing
 - root-cause-first debugging
@@ -36,9 +37,9 @@ Codex-native workflow skills inspired by `gstack`.
 
 The goal is not to mirror upstream line-for-line. The goal is to keep the workflow value and remove the environment-specific overhead.
 
-## Install locally
+## Install into Codex
 
-To link all skills from this repo into your local Codex setup:
+To link all curated skills from this repo into your local Codex setup:
 
 ```bash
 python3 scripts/sync_from_gstack.py install --target ~/.codex/skills
@@ -46,9 +47,9 @@ python3 scripts/sync_from_gstack.py install --target ~/.codex/skills
 
 That creates symlinks from this repo's `skills/` directory into `~/.codex/skills`.
 
-## Track upstream gstack changes
+## Keep up with upstream gstack
 
-If you have a local `gstack` checkout available, generate a fresh sync report and scaffold any newly discovered skills:
+If you have a local `gstack` checkout, refresh the sync report and scaffold any newly discovered upstream skills:
 
 ```bash
 ./scripts/update-from-local-gstack.sh ../knowledge-base/gstack
@@ -66,26 +67,38 @@ This will:
 - detect upstream skills not yet mapped
 - scaffold starter Codex skill folders under `scaffolds/`
 
-## Repo structure
+## Current upstream coverage
+
+### Curated and mapped
+- `browse` -> `browser-dogfood`
+- `debug` -> `systematic-debugging`
+- `qa-only` -> `web-qa-report`
+- `qa` -> `web-qa-fix`
+- `review` -> `pr-preflight-review`
+- `document-release` -> `doc-sync-after-change`
+- `ship` -> `ship`
+- `office-hours` -> `office-hours`
+- `plan-ceo-review` -> `plan-ceo-review`
+- `plan-eng-review` -> `plan-eng-review`
+- `design-consultation` -> `design-consultation`
+- `design-review` -> `design-review-live`
+- `retro` -> `project-retro`
+
+### Currently scaffolded, not yet curated
+- `plan-design-review`
+- `setup-browser-cookies`
+- `gstack-upgrade`
+
+## Repository layout
 
 ```text
 skills/                  curated Codex-native skills
 mappings/skills.json     upstream gstack -> codex-gstack mapping
-catalog/                 generated status output
-scaffolds/               auto-created starter ports for new upstream skills
+catalog/                 generated sync status
+scaffolds/               starter ports for newly discovered upstream skills
 scripts/                 sync, install, and validation tooling
 docs/                    porting notes and contributor docs
 ```
-
-## Current porting model
-
-Mapped upstream skills become curated Codex skills.
-
-Unmapped upstream skills are not ignored. They are scaffolded automatically so a contributor can finish the port quickly instead of starting from zero.
-
-That means this repo supports both:
-- a stable curated skill pack
-- a fast path for adopting new upstream `gstack` skills
 
 ## Validation
 
@@ -106,7 +119,9 @@ This checks:
 1. Add or refine a skill in `skills/`
 2. Run `python3 scripts/check_repo.py`
 3. If syncing from upstream, run `python3 scripts/sync_from_gstack.py status --source <path>`
-4. Commit one logical change at a time
+4. If new upstream skills appear, run `python3 scripts/sync_from_gstack.py scaffold-new --source <path>`
+5. Promote useful scaffolded skills into curated versions under `skills/`
+6. Commit one logical change at a time
 
 Detailed guidance lives in `CONTRIBUTING.md` and `docs/porting-guide.md`.
 
