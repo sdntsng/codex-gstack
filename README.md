@@ -52,17 +52,17 @@ That creates symlinks from this repo's `skills/` directory into `~/.codex/skills
 
 ## Keep up with upstream gstack
 
-If you have a local `gstack` checkout, refresh the sync report and scaffold any newly discovered upstream skills:
+If you have a local clone of upstream `gstack`, refresh the sync report and scaffold any newly discovered upstream skills:
 
 ```bash
-./scripts/update-from-local-gstack.sh ../knowledge-base/gstack
+./scripts/update-from-local-gstack.sh /path/to/gstack
 ```
 
 Or run the steps explicitly:
 
 ```bash
-python3 scripts/sync_from_gstack.py status --source ../knowledge-base/gstack
-python3 scripts/sync_from_gstack.py scaffold-new --source ../knowledge-base/gstack
+python3 scripts/sync_from_gstack.py status --source /path/to/gstack
+python3 scripts/sync_from_gstack.py scaffold-new --source /path/to/gstack
 ```
 
 This will:
@@ -72,7 +72,7 @@ This will:
 
 ## Current upstream coverage
 
-The local upstream source used for the current mapping is `../knowledge-base/gstack`.
+The current mapping was validated against an external local clone of upstream `gstack`.
 
 - Local `gstack` HEAD: `52f1607`
 - Local `gstack` `origin/main`: `50a7cf8`

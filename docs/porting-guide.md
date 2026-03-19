@@ -31,7 +31,7 @@ Turn strong upstream `gstack` workflows into concise Codex-native skills.
 
 ## Fast path for new upstream skills
 When a new upstream skill appears:
-1. run `sync_from_gstack.py scaffold-new`
+1. run `sync_from_gstack.py scaffold-new --source /path/to/gstack`
 2. inspect the generated scaffold under `scaffolds/`
 3. decide whether it belongs in the curated pack
 4. if yes, create a polished version under `skills/`

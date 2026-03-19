@@ -6,7 +6,6 @@ import json
 import re
 from pathlib import Path
 
-DEFAULT_SOURCE = Path(__file__).resolve().parents[2] / 'knowledge-base' / 'gstack'
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MAPPINGS_PATH = REPO_ROOT / 'mappings' / 'skills.json'
 SKILLS_DIR = REPO_ROOT / 'skills'
@@ -61,7 +60,7 @@ def write_status(source_root: Path) -> Path:
     lines = [
         '# gstack sync status',
         '',
-        f'Source: `{source_root}`',
+        f'Source: external gstack checkout `{source_root.name}`',
         '',
         '| gstack skill | codex skill | category | status |',
         '|---|---|---|---|'
@@ -129,14 +128,18 @@ def install_links(target_dir: Path) -> list[str]:
 def main() -> None:
     parser = argparse.ArgumentParser(description='Sync and scaffold Codex skills from gstack.')
     parser.add_argument('command', choices=['status', 'scaffold-new', 'install'])
-    parser.add_argument('--source', type=Path, default=DEFAULT_SOURCE)
+    parser.add_argument('--source', type=Path)
     parser.add_argument('--target', type=Path, default=Path.home() / '.codex' / 'skills')
     args = parser.parse_args()
 
     if args.command == 'status':
+        if args.source is None:
+            parser.error('--source is required for status')
         out = write_status(args.source)
         print(out)
     elif args.command == 'scaffold-new':
+        if args.source is None:
+            parser.error('--source is required for scaffold-new')
         created = scaffold_new(args.source)
         write_status(args.source)
         for path in created:

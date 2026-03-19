@@ -1,6 +1,6 @@
 # gstack sync status
 
-Source: `../knowledge-base/gstack`
+Source: external gstack checkout `gstack`
 
 | gstack skill | codex skill | category | status |
 |---|---|---|---|
